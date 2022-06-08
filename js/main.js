@@ -26,6 +26,8 @@ if (numeroDez == stringDez) {
 }
 */
 
+
+
 /*
 // #7DaysOfCode - Dia 2 - Váriaveis 
 const texto = document.querySelector("#texto")
@@ -51,7 +53,7 @@ console.log(texto.innerHTML)
 */
 
 
-
+/*
 // #7DaysOfCode - Dia 3 - Controle de fluxo
 const texto = document.querySelector("#texto")
 const texto2 = document.querySelector("#texto2")
@@ -87,7 +89,58 @@ for(i = "ok"; perguntaFinal === i;) {
     break
   }
 }
+*/
 
 
+/*
+//#7DaysOfCode - Dia 4 - Jogo de adivinha
+const numeroAleatorio = Math.floor(Math.random()*10)
+const tentativas = 3
+
+for(i = 0; i <= tentativas; i++) {  
+  const chute = prompt("De 0 a 10, qual número estou pensando??")
+  if(chute != numeroAleatorio && chute > numeroAleatorio){
+    alert(`Você errou, o número escolhido é MENOR que ${chute}, você ainda tem ${tentativas - i} tentativas!!!`)
+  }
+  if(chute != numeroAleatorio && chute < numeroAleatorio) {
+    alert(`Você errou, o número escolhido é MAIOR que ${chute}, você ainda tem ${tentativas - i} tentativas!!!`)
+  }
+
+  if(chute == numeroAleatorio) {
+    alert(`Parabéns, você acertou, o número escolhido era ${numeroAleatorio}!!!`)
+    break
+  } else if(i === tentativas) {
+    alert(`Você errou, o número escolhido era ${numeroAleatorio}`)
+    break
+  }
+}
+*/
+
+
+////#7DaysOfCode - Dia 5 - Arrays
+
+const listaDeCompras = {
+  frutas: [],
+  laticinios: [],
+  congelados: [],
+  doces: [],
+  padaria: [],
+  limpeza: [],
+
+}
+const pergunta = prompt(`Gostaria de adicionar um novo item a lista de compra "sim" ou "não"`)
+
+while(pergunta === "sim") {
+  let comida = prompt("Qual comida gostaria de adicionar?")
+  let grupos = prompt(`Em qual grupo gostaria de adicionar essa comida? frutas, laticinios, congelados, doces, padaria, limpeza?`)
+  listaDeCompras[grupos].push(comida)
+  console.log(listaDeCompras)
+
+  const pergunta = prompt(`Gostaria de adicionar um novo item a lista de compra "sim" ou "não"`)
+  if(pergunta === "não") {
+    console.log(listaDeCompras)
+    break
+  }
+}
 
 
