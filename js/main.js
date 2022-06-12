@@ -116,9 +116,8 @@ for(i = 0; i <= tentativas; i++) {
 }
 */
 
-
-////#7DaysOfCode - Dia 5 - Arrays
-
+/*
+//#7DaysOfCode - Dia 5 - Arrays
 const listaDeCompras = {
   frutas: [],
   laticinios: [],
@@ -142,5 +141,58 @@ while(pergunta === "sim") {
     break
   }
 }
+*/
 
 
+
+//#7DaysOfCode - Dia 6 - Remoção de itens do array
+const listaDeCompras = {
+  frutas: [],
+  laticinios: [],
+  congelados: [],
+  doces: [],
+  padaria: [],
+  limpeza: [],
+}
+
+const pergunta = prompt(`Gostaria de adicionar um novo item a lista de compra "sim" ou "não"`)
+
+while(pergunta === "sim") {
+  let comida = prompt("Qual comida gostaria de adicionar?")
+  let grupos = prompt(`Em qual grupo gostaria de adicionar? Grupos: frutas, laticinios, congelados, doces, padaria, limpeza?`)
+  listaDeCompras[grupos].push(comida)
+  let lista = alert(`Lista de compras: Frutas: ${listaDeCompras.frutas}, 
+  Laticinios: ${listaDeCompras.laticinios}, 
+  Congelados: ${listaDeCompras.congelados}, 
+  Doces: ${listaDeCompras.doces}, 
+  Padaria: ${listaDeCompras.padaria}, 
+  Limpeza: ${listaDeCompras.limpeza}. 
+  Sua lista até o momento!!`)
+
+  const pergunta = prompt(`Gostaria de adicionar um novo item a lista de compra "sim" ou "não"? Também é possível "remover"!`)
+
+  if(pergunta === "não") {
+    lista = alert(`Lista de compras: Frutas: ${listaDeCompras.frutas}, 
+    Laticinios: ${listaDeCompras.laticinios}, 
+    Congelados: ${listaDeCompras.congelados}, 
+    Doces: ${listaDeCompras.doces}, 
+    Padaria: ${listaDeCompras.padaria}, 
+    Limpeza: ${listaDeCompras.limpeza}.
+    Sua lista terminou com esses itens!!!`)
+    break
+  } 
+  if(pergunta === "remover") {
+    lista = prompt(`Lista de compras: Frutas: ${listaDeCompras.frutas}, 
+    Laticinios: ${listaDeCompras.laticinios}, 
+    Congelados: ${listaDeCompras.congelados}, 
+    Doces: ${listaDeCompras.doces}, 
+    Padaria: ${listaDeCompras.padaria}, 
+    Limpeza: ${listaDeCompras.limpeza}. 
+    Qual item gostaria de REMOVER?`)
+    let grupo = prompt(`De qual grupo gostaria de REMOVER o item? Grupos: frutas, laticinios, congelados, doces, padaria, limpeza?`)
+    if(listaDeCompras[grupo].indexOf(lista) != -1) {
+      listaDeCompras[grupo].splice(listaDeCompras[grupo].indexOf(lista), 1)
+      alert(`O item ${lista} foi removido com sucesso do grupo ${grupo}`)
+    }
+  }
+}

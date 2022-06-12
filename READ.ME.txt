@@ -1,10 +1,19 @@
 Todos os projetos estão dentro do mesmo arquivo Main, separados por comentarios.
 
 
-1º Projeto - 
+1º Projeto - Desafio sobre igualdade de valores e comparações em javascript usando if() e operadores de comparação.
 
 
-2º Projeto - 
+2º Projeto - Desafio sobre váriaveis e utilização do prompt para que o úsuario possa decidir seus valores e com eles vir a resposta desejada.
 
 
-3º Projeto - 
+3º Projeto - Desafio sobre controle de fluxo e criação de um pequeno jogo com caminhos diferentes dependendo da resposta do úsuario. Criação de loops para que seja repetido a pergunta se o úsuario responder tal questão.
+
+
+4º Projeto - Desafio de adivinhação com numeros aleatorios criados pelo Math.floor e Math.random. Nesse jogo em expecifico criei verificações se o numero é maior ou menor em comparação com o chute. Além de um contador de tentativas.
+
+
+5º Projeto - Desafio com arrays para criar uma lista de compras, onde add as informações via prompt e add na váriavel com objeto e add dentro de cada array usando o .push.
+
+
+6º Projeto - Desafio com arrays para criar uma lista de compras, mas agora existiria a opção de remover o item da lista já criada.
