@@ -201,13 +201,6 @@ while(pergunta === "sim") {
 
  //#7DaysOfCode - Dia 7 - Funções
 const pergunta = prompt("Gostaria de fazer uma continha marota? `sim` ou `sair`?")
-const conta = [
-  "soma",
-  "multiplicação",
-  "divisão",
-  "subtração",
-  "sair"
-]
 
 while(pergunta === "sim") {
   const operacao = prompt(`Qual o tipo de operação gostaria de utilizar? "soma", "multiplicação", "divisão", "subtração" ou "sair"?`)
@@ -217,17 +210,27 @@ while(pergunta === "sim") {
   }
   num1 = prompt("Qual o 1º número?")
   num2 = prompt("Qual o 2º número?")
-  if(operacao === "soma") {
-    alert(soma(num1, num2))
-  }
-  if(operacao === "multiplicação") {
-    alert(multiplicacao(num1, num2))
-  }
-  if(operacao === "divisão") {
-    alert(divisao(num1, num2))
-  }
-  if(operacao === "subtração") {
-    alert(subtracao(num1, num2))
+  switch (operacao) {
+    case "soma": {
+      alert(soma(num1, num2))
+      break
+    }
+     
+    case "multiplicação": {
+      alert(multiplicacao(num1, num2))
+      break
+    }
+
+    case "divisão": {
+      alert(divisao(num1, num2))
+      break
+    }
+
+    case "subtração": {
+      alert(subtracao(num1, num2))
+      break
+    }
+  
   }
 }
 
